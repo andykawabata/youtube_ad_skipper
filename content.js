@@ -1,5 +1,4 @@
-console.log("running content script"); 
-
+console.log("running content script");
 var initialSkipInProgress= true;
 
 //SKIP ON ARIVAL TO YOUTUBE OR REFRESH
