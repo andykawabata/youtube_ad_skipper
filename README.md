@@ -14,5 +14,5 @@ Mid-video ads and banner adds are detected by a mutation observer that is added 
 4)  Open a new tab in your Chrome browser and type in "chrome://extensions" in the search bar. Press enter.
 5)  In the upper right corner, turn "Developer Mode" on. 
 6)  Click "load unpacked"
-7)  Find the folder you just downloaded/unzipped "youtube_add_skipper-master" and click "Select Folder"
+7)  Find the folder you just downloaded/unzipped "youtube_ad_skipper-master" and click "Select Folder"
 8)  Turn "Developer Mode" off
