@@ -1,39 +1,31 @@
+console.log("running content script"); 
 
-console.log("in."); 
 var initialSkipInProgress= true;
 
-
-//SKIP ON DOM MUTATION
-
-const targetNode = document.getElementsByClassName("video-ads").item(0);
-const config = {childList: true}
-
-function callback(mutationList, observer){
-	asyncSkip();
-}
-
-var myObserver = new MutationObserver(callback);
-myObserver.observe(targetNode, config);
-
-
-
-//SKIP ON ARVIAL TO YOUTUBE OR REFRESH
+//SKIP ON ARIVAL TO YOUTUBE OR REFRESH
 
 window.addEventListener ("load", myMain, false);
 function myMain () {
+
 	console.log("into main");
 	initialSkip();
+	setTimeout(function(){  
+		addObserver();      //after 1 second, add mutaion observer
+	},1000);
 }
-
 
 //SKIP ON URL CHANGE
 
 chrome.runtime.onMessage.addListener(gotMessage);
 function gotMessage(message, sender, sendResponse){
 
+	console.log("url has changed");
 	initialSkip();
-}
 
+	setTimeout(function(){  
+		addObserver();     //after 3 second, add mutaion observer
+	},3000);
+}
 
 //SKIP FUNCTIONS
 
@@ -73,4 +65,19 @@ function asyncSkip(){
 }
 
 
+//SET UP MUTATION OBSERVER
+
+function callback(mutationList, observer){
+	console.log("async tiggered");
+	asyncSkip();
+}
+
+function addObserver(){
+
+		const targetNode = document.getElementsByClassName("video-ads").item(0);
+		const config = {childList: true}
+		console.log(targetNode);
+		var myObserver = new MutationObserver(callback);
+		myObserver.observe(targetNode, config);
+}
 
