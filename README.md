@@ -10,7 +10,7 @@ Mid-video ads and banner adds are detected by a mutation observer that is added 
 
 1)  Click the green "Clone or Download" button
 2)  Click "download ZIP"
-3)  Unzip the file and put it anywhere you like
+3)  Unzip the folder and put it anywhere you like
 4)  Open a new tab in your Chrome browser and type in "chrome://extensions" in the search bar. Press enter.
 5)  In the upper right corner, turn "Developer Mode" on. 
 6)  Click "load unpacked"
