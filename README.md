@@ -18,4 +18,4 @@ Mid-video ads and banner adds are detected by a mutation observer that is added 
 8)  Turn "Developer Mode" off
 
 \*** if you are getting an error that says "
-Manifest file is missing or unreadable" it's likey because the "youtube_ad_skipper-master" folder has another folder within it (with the same name). On step 7, Make sure you select the second folder.
+Manifest file is missing or unreadable" it's likey because the "youtube_ad_skipper-master" folder has another folder within it (with the same name).If thats the case, make sure you select the folder within the folder.
